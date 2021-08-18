@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Christian Ndu | Resume</title>
+	</head>
+	<body>
+		<section>
+			<h2 class="text-red">Hello, I'm</h2>
+			<h2>Christian Ndu</h2>
+		</section>
+
+		<section class="address">
+			<p>19, ogunmokun way</p>
+			<p>Itoki, Ogun state</p>
+			<p>+234 812 927 0350</p>
+			<div class="links">
+				<a>christiannduh@gmail.com</a>
+				<a href="https;//github.com/khrees2412"
+					>https://github.com/khrees2412</a
+				>
+			</div>
+		</section>
+		<section class="skills">
+			<h2 class="text-red">Skills</h2>
+			<p>
+				A software engineer (web) with hands-on experienceimplementing
+				UI mockups and building and consuming REST APIs. I primarily
+				work with JavaScript and Go, on the frontend with Reactjs and on
+				the backend with ExpressJS and Go.I also possess SQL and NoSQL
+				experience with PostgreSQL and MongoDB respectively.
+			</p>
+			<p>
+				I have built various production scale and also side projects
+				leveraging tools like ReactJS, NextJS, Golang, NodeJS,
+				ExpressJS, MongoDB, Firebase, PostgreSQL, TailwindCSS,
+				Chakra-UI, Netlify (Serverless functions included), Heroku,
+				MailChimp.
+			</p>
+		</section>
+		<section class="experience">
+			<h2 class="text-red">Experience - Freelancing</h2>
+			<div class="company">
+				<h4>Feb 2021</h4>
+				<h1>
+					Renager Limited, Remote (Nigeria)
+					<i>Frontend Engineer - Contract</i>
+				</h1>
+				<ul>
+					<li>
+						I was responsible for building the landing page, being
+						the ﬁrst point of contact with prospective clients I
+						ensured a pixel perfect implementation.
+					</li>
+					<li>
+						I built it with NextJs and styling with Styled JSX and
+						ensured the page was highly performant and responsive.
+					</li>
+				</ul>
+			</div>
+			<div class="company">
+				<h4>Mar 2021</h4>
+				<h1>
+					myStash Technologies, Remote (Nigeria)
+					<i>Frontend Engineer - Contract</i>
+				</h1>
+				<ul>
+					<li>I worked on the landing page built with React.</li>
+					<li>
+						I worked on building a newsletter integration with
+						mailchimp and Netlify serverless functions.
+					</li>
+					<li>
+						Built a paystack recurring charge service for a demo
+					</li>
+					<li>
+						Used firebase to build a fully functional fintech app.
+					</li>
+				</ul>
+			</div>
+		</section>
+		<section class="projects">
+			<h2 class="text-red">Projects</h2>
+			<div class="project">
+				<h3>
+					Collection of beautiful frontend implementations (designs
+					gotten from
+					<a href="https://frontendmentor.io" target="_blank"
+						>Frontendmentor.io</a
+					>) :
+				</h3>
+				<a href="https://khrees2412.github.io/FM_tasks">
+					https://khrees2412.github.io/FM_tasks</a
+				>
+			</div>
+			<div class="project">
+				<h3>
+					TodoApp - An app that helps users keep track of tasks most
+					important to them.
+				</h3>
+				<a href="https://github.com/khrees2412/react-todo-app"
+					>https://github.com/khrees2412/react-todo-app</a
+				>
+				<ul>
+					<li>I built the app using ReactJs and Firebase.</li>
+					<li>
+						I implemented user authentication using Firebase Auth.
+					</li>
+					<li>
+						I stored each user’s data in a NoSQL database using
+						Firebase Cloud Firestore.
+					</li>
+				</ul>
+			</div>
+			<div class="project">
+				<h3>
+					Linktory - A full stack JavaScript project developed using
+					the MERN stack that allows users to store URLs in the cloud,
+					repo at
+					<a href="https://github.com/khrees2412/linktory"
+						>https://github.com/khrees2412/linktory</a
+					>
+				</h3>
+				<ul>
+					<li>
+						I implemented authentication using JWT in expressJS.
+					</li>
+					<li>User can add and delete URLs.</li>
+					<li>
+						User data was safely secured in a cloud-based MongoDB
+						database
+					</li>
+				</ul>
+			</div>
+			<div class="project">
+				<h3>LinkPreview - API for a linkpreview app</h3>
+				<p>
+					Check it out
+					<a href="https://github.com/khrees2412/linkpreview"
+						>LinkPreview</a
+					>
+				</p>
+			</div>
+		</section>
+
+		<form action="/" method="POST">
+			<h2>Send me a message</h2>
+			<div class="form-control">
+				<label>Name</label>
+				<input type="text" placeholder="your name.." />
+			</div>
+			<div class="form-control">
+				<label>Email</label>
+				<input type="email" />
+			</div>
+			<div class="form-control tx">
+				<label>Message</label>
+				<textarea> </textarea>
+			</div>
+			<button type="submit">Send Message</button>
+		</form>
+	</body>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+		.text-red {
+			color: red;
+		}
+		body {
+			margin: 3rem;
+			line-height: 1.6;
+		}
+		section {
+			padding: 1rem;
+			margin: 2rem;
+		}
+		p,
+		li {
+			font-size: 18px;
+		}
+		.links {
+			display: flex;
+			flex-direction: column;
+		}
+		.project,
+		.company {
+			margin: 10px;
+		}
+		form {
+			padding: 1rem;
+			margin: 2rem auto;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			width: 320px;
+		}
+		label {
+			display: block;
+		}
+		input {
+			padding: 10px;
+			border-radius: 5px;
+		}
+		.form-control {
+			margin: 1rem auto;
+			width: 75%;
+		}
+	</style>
+</html>
