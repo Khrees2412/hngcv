@@ -145,21 +145,21 @@
 			</div>
 		</section>
 
-		<form action="/" method="POST">
+		<form>
 			<h2>Send me a message</h2>
 			<div class="form-control">
 				<label>Name</label>
-				<input type="text" placeholder="your name.." />
+				<input type="text" class="name" placeholder="your name.." />
 			</div>
 			<div class="form-control">
 				<label>Email</label>
-				<input type="email" />
+				<input type="email" class="email" />
 			</div>
 			<div class="form-control tx">
 				<label>Message</label>
-				<textarea> </textarea>
+				<textarea class="message"> </textarea>
 			</div>
-			<button type="submit">Send Message</button>
+			<button type="submit" class="button">Send Message</button>
 		</form>
 	</body>
 	<style>
@@ -212,4 +212,34 @@
 			width: 75%;
 		}
 	</style>
+	<script>
+		async function handleForm(e) {
+			let name = document.querySelector(".name").value;
+			let email = document.querySelector(".email").value;
+			let message = document.querySelector(".message").value;
+			e.preventDefault();
+
+			const data = {
+				name,
+				email,
+				message,
+			};
+
+			await fetch("http://localhost:8080/form", {
+				headers: { "Content-Type": "application/json" },
+				method: "POST",
+				body: JSON.stringify(data),
+			})
+				.then((res) => res.json())
+				.then((resp) => console.log(resp))
+				.catch((err) => console.error(err));
+			alert(data.name);
+			name = "";
+			email = "";
+			message = "";
+		}
+		const button = document.querySelector(".button");
+
+		button.addEventListener("click", handleForm);
+	</script>
 </html>
