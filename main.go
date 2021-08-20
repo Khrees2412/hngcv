@@ -50,6 +50,9 @@ func HandleForm( w http.ResponseWriter, r *http.Request ){
 }
 
 func  WriteToJSON (data Data) {
+	if err != nil {
+		log.Fatal(err)
+	}
 	file, err := json.MarshalIndent(data, "", " ") 
 	if err != nil {
 		log.Fatal("ERROR while writing to file", err)

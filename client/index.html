@@ -26,7 +26,7 @@
 		<section class="skills">
 			<h2 class="text-red">Skills</h2>
 			<p>
-				A software engineer (web) with hands-on experienceimplementing
+				A software engineer (web) with hands-on experience implementing
 				UI mockups and building and consuming REST APIs. I primarily
 				work with JavaScript and Go, on the frontend with Reactjs and on
 				the backend with ExpressJS and Go.I also possess SQL and NoSQL
@@ -204,12 +204,37 @@
 			display: block;
 		}
 		input {
+			width: 100%;
+			padding: 10px;
+			border: 1px solid;
 			padding: 10px;
 			border-radius: 5px;
+		}
+		textarea {
+			width: 100%;
+			padding: 10px;
+			border: 1px solid;
 		}
 		.form-control {
 			margin: 1rem auto;
 			width: 75%;
+		}
+		.button {
+			padding: 15px;
+			background-color: black;
+			color: white;
+			font-size: 0.7rem;
+			border: 1px solid;
+			cursor: pointer;
+		}
+		@media only screen and (max-width: 378px) {
+			body {
+				margin: 1.5rem;
+			}
+			section {
+				padding: 0.6rem;
+				margin: 1.6rem;
+			}
 		}
 	</style>
 	<script>
@@ -225,18 +250,17 @@
 				message,
 			};
 
-			await fetch("http://localhost:8080/form", {
+			await fetch("https://khrees-resume.herokuapp.com/form", {
 				headers: { "Content-Type": "application/json" },
 				method: "POST",
 				body: JSON.stringify(data),
 			})
 				.then((res) => res.json())
-				.then((resp) => console.log(resp))
+				.then((resp) => {
+					console.log(resp);
+					alert("Your message has been sent successfully");
+				})
 				.catch((err) => console.error(err));
-			alert(data.name);
-			name = "";
-			email = "";
-			message = "";
 		}
 		const button = document.querySelector(".button");
 
